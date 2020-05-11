@@ -1,23 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import './ColorGenerator.js';
+import { generator } from './ColorGenerator.js';
+let styleGenerator = {
+  color: generator,
+};
+
+// function Example() {
+//   // Declare a new state variable, which we'll call "count"
+//   const [count, setCount] = useState(0);
+
+//   return (
+//     <div>
+//       <p>You clicked {count} times</p>
+//       <button onClick={() => setCount(count + 1)}>
+//         Click me
+//       </button>
+//     </div>
+//   );
+// }
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h2>Hamed's Color Generator</h2>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          You can click
+          <br />
+          <br />
+          <button className="button" onClick={generator}>
+            on this
+          </button>
+          <br />
+          <br /> to get a random color <br />{' '}
+          <h1 style={styleGenerator}>HERE</h1>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
