@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import './ColorGenerator.js';
 import { generator } from './ColorGenerator.js';
-let styleGenerator = {
-  color: generator,
-};
+import { useState } from 'react';
+
+// const styles = {
+//   myButton: {
+//     color: generator,
+//   },
+// };
+
+// let styleGenerator = {
+//   color: generator,
+// };
 
 // function Example() {
 //   // Declare a new state variable, which we'll call "count"
@@ -19,23 +27,37 @@ let styleGenerator = {
 //     </div>
 //   );
 // }
+/**++++++++ */
+
+/***************************/
 
 function App() {
+  let [coloring, setColoring] = useState(generator());
+
   return (
     <div className="App">
       <header className="App-header">
         <h2>Hamed's Color Generator</h2>
-        <p>
+        <div>
           You can click
           <br />
           <br />
-          <button className="button" onClick={generator}>
+          <button className="button" onClick={() => setColoring(generator())}>
             on this
           </button>
           <br />
-          <br /> to get a random color <br />{' '}
-          <h1 style={styleGenerator}>HERE</h1>
-        </p>
+          <br /> to get a random color <br />
+          <br />
+          <div
+            className="Color"
+            style={{
+              color: coloring,
+              borderColor: coloring,
+            }}
+          >
+            {coloring}
+          </div>
+        </div>
       </header>
     </div>
   );

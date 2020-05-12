@@ -12,11 +12,11 @@ code {
     monospace;
 }
 
-h1 {
+.Color {
   font-size: 4em;
   font-weight: 500;
-  border: 1px solid #e5e5e5;
   padding: 35px;
+  border: 5px solid;
 }
 
 h2 {
@@ -43,7 +43,7 @@ button:hover {
   background-color: grey;
 }
 .button:active {
-  background-color: purple;
+  background-color: rgb(54, 122, 104);
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
