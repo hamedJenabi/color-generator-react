@@ -4,35 +4,11 @@ import './ColorGenerator.js';
 import { generator } from './ColorGenerator.js';
 import { useState } from 'react';
 
-// const styles = {
-//   myButton: {
-//     color: generator,
-//   },
-// };
-
-// let styleGenerator = {
-//   color: generator,
-// };
-
-// function Example() {
-//   // Declare a new state variable, which we'll call "count"
-//   const [count, setCount] = useState(0);
-
-//   return (
-//     <div>
-//       <p>You clicked {count} times</p>
-//       <button onClick={() => setCount(count + 1)}>
-//         Click me
-//       </button>
-//     </div>
-//   );
-// }
-/**++++++++ */
-
 /***************************/
 
 function App() {
-  let [coloring, setColoring] = useState(generator());
+  //using useState to get a new value with every click event
+  let [coloring, setColoring] = useState('HERE');
 
   return (
     <div className="App">
